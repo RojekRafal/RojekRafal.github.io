@@ -1,0 +1,22 @@
+{
+    "posts": [
+        {
+            "id": 1,
+            "title": "Pierwszy post na blogu",
+            "date": "2025-01-15",
+            "content": "To jest mój pierwszy wpis na blogu hostowanym na GitHub Pages!"
+        },
+        {
+            "id": 2,
+            "title": "Nowy projekt",
+            "date": "2025-02-02",
+            "content": "Pracuję teraz nad systemem postów ładowanych z pliku JSON."
+        },
+        {
+            "id": 3,
+            "title": "Trening i nauka",
+            "date": "2025-03-05",
+            "content": "Staram się łączyć naukę programowania z treningami na siłowni."
+        }
+    ]
+}
