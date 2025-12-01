@@ -3,6 +3,8 @@ async function loadPosts() {
 
     try {
         const response = await fetch("posty.json");
+        if (!response.ok) throw new Error("Nie można pobrać posts.json");
+
         const data = await response.json();
         const posts = data.posts;
 
@@ -13,19 +15,17 @@ async function loadPosts() {
             div.classList.add("post");
 
             div.innerHTML = `
-                <h2>${post.title}</h2>
+                <h2><a href="post.html?id=${post.id}">${post.title}</a></h2>
                 <p><i>${post.date}</i></p>
                 <p>${post.content.substring(0, 150)}...</p>
-                <a href="post.html?id=${post.id}">Czytaj więcej</a>
             `;
 
             container.appendChild(div);
         });
 
     } catch (error) {
-        container.innerHTML = "<p>Błąd wczytywania postów.</p>";
+        container.innerHTML = `<p>Błąd wczytywania postów: ${error.message}</p>`;
     }
 }
 
 loadPosts();
-
