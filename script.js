@@ -2,7 +2,7 @@ async function loadPosts() {
     const container = document.getElementById("posts");
 
     try {
-        const response = await fetch("posts.json");
+        const response = await fetch("posty.json");
         const data = await response.json();
         const posts = data.posts;
 
@@ -28,3 +28,4 @@ async function loadPosts() {
 }
 
 loadPosts();
+
